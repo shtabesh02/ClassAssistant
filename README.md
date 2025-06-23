@@ -1,8 +1,11 @@
 # ClassAssistant
 
 ## DB Schema
-![DB Schema](schema.png)
+![DB Schema](./images/caschema.png)
 <!-- <img src="schema.png" alt="DB Schema" width="500"> -->
+
+## API Documentation
+
 
 ## Team Members
 - Yitian
