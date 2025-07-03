@@ -1,0 +1,142 @@
+/* Navigation.css */
+
+.navBar {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 4rem;
+    background-color: #ffffff;
+    color: #000000;
+    border-bottom: 1px solid #bba2a2;
+    margin-bottom: 3rem;
+  }
+  
+  .logo {
+    width: 50px;
+    height: auto;
+  }
+  
+  .toggle-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .navBar-create-new-button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+    text-decoration: none;
+  }
+  
+  .toggle {
+    margin-left: auto;
+    list-style-type: none;
+    /* cursor: pointer; */
+  }
+
+  .profile-dropdown{
+    /* display: none; */
+    position: absolute;
+    /* top: 100%; */
+    right: 0;
+    background-color: #ffffff;
+    padding: 5px;
+    margin: 5px;
+    list-style: none;
+    z-index: 1;
+    cursor: pointer;
+    border: #f2eaea solid;
+    border-radius: 10px;
+    /* cursor: pointer; */
+  }
+  
+  .profile-dropdown li:hover{
+    background-color: #f7e9e9;
+  }
+
+  .profile-dropdown:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+  .profile-dropdown li{
+    padding: 5px;
+    margin: 5px;
+    width: max-content;
+  }
+
+  .dropdown-list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    padding: 10px;
+    list-style: none;
+
+  }
+  
+  
+
+  .hidden{
+    display: none;
+  }
+
+
+
+  .skybnb-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+    
+}
+
+.skybnb-logo b{
+    text-decoration: none;
+    color: red;
+    /* font-family: 'Press Start 2P', system-ui; */
+    font-family: 'Sansita', sans-serif;
+    position: relative;
+    left: -15px;
+}
+
+.skybnb-logo i{
+    color: rgb(255, 0, 0);
+    /* margin-right: 5px; */
+    
+}
+
+.skybnb-logo .material-symbols-outlined{
+  width: 40px;
+  border: 1px solid;
+}
+
+.search-spot{
+  display: flex;
+  padding: 5px;
+}
+
+.search-spot > div{
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  margin: 5px;
+}
+
+.who{
+  display: flex;
+  justify-content: center;
+}
+
+.searchWho{
+  display: flex;
+  align-items: center;
+}
