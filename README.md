@@ -44,3 +44,16 @@ running `npm init -y`.
 - `sqlite3` - SQLite3
 - `dotenv-cli` - use `dotenv` in the command line
 - `nodemon` - hot reload server `backend` files
+
+In the __frontend__ folder, `npm install` the following packages as
+dependencies:
+- `npm i react` - Reactjs
+- `js-cookie` - extracts cookies
+- `react-redux` - React components and hooks for Redux
+- `react-router-dom` - routing for React
+- `redux` - Redux
+- `redux-thunk` - Redux thunk
+
+`npm install -D` the following packages as dev-dependencies:
+
+- `redux-logger` - log Redux actions in the browser's DevTools console

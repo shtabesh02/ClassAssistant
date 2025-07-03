@@ -3,15 +3,6 @@
 This repo contains a basic Vite React template configured for term projects.
 projects.
 
-## How to clone
-
-To clone this repo as `<new-project-name>`, run
-
-```shell
-npx tiged appacademy/aa-react18-redux-vite-template#main <new-project-name>
-```
-
-in the directory where you want the new project to appear.
 
 ## How to install and run
 
