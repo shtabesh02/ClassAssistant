@@ -5,6 +5,7 @@ import Navigation from './components/Navigation';
 import * as sessionActions from './store/session';
 
 import Home from './components/Home';
+import Settings from './components/Settings';
 
 
 function Layout() {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home />
+      },
+      {
+        path: '/settings',
+        element: <Settings />
       },
     ]
   }

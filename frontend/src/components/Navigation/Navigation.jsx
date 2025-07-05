@@ -9,9 +9,9 @@ function Navigation({ isLoaded }) {
 
     const navigate = useNavigate()
 
-    const newStudent = () => {
-        navigate(`/`)
-    }
+    // const newStudent = () => {
+    //     navigate(`/`)
+    // }
     const goToHome = () => {
         navigate('/')
     }
@@ -29,11 +29,13 @@ function Navigation({ isLoaded }) {
                 <h1>BU Class Assistant</h1>
             </div>
             <div className='toggle-container'>
-                {sessionUser && (
+
+                {/* {sessionUser && (
                     <button className='navBar-create-new-button' onClick={newStudent}>
                         Add a new studdent
                     </button>
-                )}
+                )} */}
+
                 {isLoaded && (
                     <li className="toggle" >
                         <ProfileButton user={sessionUser} />

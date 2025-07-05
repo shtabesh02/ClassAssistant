@@ -27,9 +27,9 @@ function LoginFormModal() {
 
   const handleDemoLogin = (e) => {
     e.preventDefault();
-    // return dispatch(sessionActions.login({ credential: 'adanesh', password: 'password2' }))
-    //   .then(closeModal)
-    alert("No API defined yet.")
+    return dispatch(sessionActions.login({ credential: 'yitian', password: 'password1' }))
+      .then(closeModal)
+    // alert("No API defined yet.")
   }
 
   const handleDisableLogin = credential.length < 4 || password.length < 6

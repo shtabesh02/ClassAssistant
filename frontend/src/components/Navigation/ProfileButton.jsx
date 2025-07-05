@@ -9,6 +9,8 @@ import { useNavigate } from 'react-router-dom'
 import './ProfileButton.css'
 
 function ProfileButton({ user }) {
+
+  console.log('user from session: ', user)
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [showMenu, setShowMenu] = useState(false);
@@ -43,12 +45,8 @@ function ProfileButton({ user }) {
   };
 
   const handleNav = () => {
-    navigate('/spots/current')
+    navigate('/settings')
   };
-
-  const manageReviews = () => {
-    navigate(`/reviews/current`)
-  }
 
   const ulClassName = "profile-dropdown" + (showMenu ? "" : " hidden");
 
@@ -67,11 +65,7 @@ function ProfileButton({ user }) {
             <li>{user.firstName} {user.lastName}</li>
             <li>{user.email}</li>
             <li>
-              <button onClick={handleNav}>Manage Spots</button>
-            </li>
-
-            <li>
-              <button onClick={manageReviews}>Manage Reviews</button>
+              <button onClick={handleNav}>Settings</button>
             </li>
 
 
