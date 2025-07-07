@@ -9,26 +9,18 @@ function SignupFormModal() {
   const dispatch = useDispatch();
   //const sessionUser = useSelector((state) => state.session.user);
   const [email, setEmail] = useState("");
-  const [username, setUsername] = useState("");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
   const [errors, setErrors] = useState({});
   const { closeModal } = useModal();
 
   const handleSubmit = (e) => {
-
     e.preventDefault();
-    if (password === confirmPassword) {
-      setErrors({});
       return dispatch(
-        sessionActions.signup({
+        sessionActions.subscribe({
           email,
-          username,
           firstName,
           lastName,
-          password
         })
       )
         .then(closeModal)
@@ -40,15 +32,11 @@ function SignupFormModal() {
           }
 
         });
-    }
-    return setErrors({
-      confirmPassword: "Confirm Password field must be the same as the Password field"
-    });
   };
 
   return (
     <>
-      <h1 className='signup'>Sign Up</h1>
+      <h1 className='signup'>Subscribe to get notifications on time.</h1>
       <form className='form' onSubmit={handleSubmit}>
         <label className='form-label'>
           <input
@@ -61,17 +49,7 @@ function SignupFormModal() {
           />
         </label>
         {errors.email && <p className='form-error-message'>{errors.email}</p>}
-        <label className='form-label'>
-          <input
-            className='input'
-            placeholder='Username'
-            type="text"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            required
-          />
-        </label>
-        {errors.username && <p className='form-error-message'>{errors.username}</p>}
+
         <label className='form-label'>
           <input
             className='input'
@@ -94,35 +72,15 @@ function SignupFormModal() {
           />
         </label>
         {errors.lastName && <p className='form-error-message'>{errors.lastName}</p>}
-        <label className='form-label'>
-          <input
-            className='input'
-            placeholder='Password'
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-        </label>
-        {errors.password && <p className='form-error-message'>{errors.password}</p>}
-        <label className='form-label'>
-          <input
-            className='input'
-            placeholder='Confirm Password'
-            type="password"
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
-            required
-          />
-        </label>
-        {errors.confirmPassword && <p className='form-error-message'>{errors.confirmPassword}</p>}
+      
+
 
         <button
             className='signup-form-button'
             type="submit"
-            disabled = {!email || !username || username.length < 4 || !firstName || !lastName || !password || password.length < 6 || !confirmPassword}
+            disabled = {!email || !firstName || !lastName}
             >
-              Sign Up
+              Subscribe
         </button>
 
       </form>
