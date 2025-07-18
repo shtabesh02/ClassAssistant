@@ -16,12 +16,13 @@ const { User, Spot, SpotImage, Review, ReviewImage, Booking, Sequelize } = requi
 const router = require('express').Router();
 const sessionRouter = require('./session.js');
 const usersRouter = require('./users.js');
+const announcementRouter = require('./announcement.js');
 
 router.use(restoreUser);
 
 router.use('/session', sessionRouter);
-
 router.use('/users', usersRouter);
+router.use('/announcement', announcementRouter);
 
 // Test the API router
 router.post('/test', function (req, res) {
