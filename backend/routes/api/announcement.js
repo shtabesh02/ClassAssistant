@@ -26,7 +26,6 @@ router.post('/', async (req, res) => {
 
 module.exports = router;
 
-
 // const router = require('express').Router();
 // const {Announcement} = require('../../db/models');
 // // Add new announcement
