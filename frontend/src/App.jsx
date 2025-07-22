@@ -6,6 +6,7 @@ import * as sessionActions from './store/session';
 
 import Home from './components/Home';
 import Settings from './components/Settings';
+import Announcement from './components/Announcement';
 
 
 function Layout() {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
       {
         path: '/settings',
         element: <Settings />
+      },
+      {
+        path: '/announcements',
+        element: <Announcement />
       },
     ]
   }

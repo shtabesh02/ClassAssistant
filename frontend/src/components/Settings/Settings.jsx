@@ -8,7 +8,7 @@ function Settings() {
         <hr />
         <ul>
             <li>
-                <NavLink>Announcements</NavLink>
+                <NavLink to={`/announcements`}>Announcements</NavLink>
             </li>
             <li>
                 <NavLink>List of students</NavLink>

@@ -51,7 +51,7 @@ export const signup = (user) => async (dispatch) => {
 
 
 export const subscribe = (user) => async (dispatch) => {
-  const { username, firstName, lastName, email, password } = user;
+  const { firstName, lastName, email } = user;
   const response = await csrfFetch("/api/students", {
     method: "POST",
     body: JSON.stringify({
