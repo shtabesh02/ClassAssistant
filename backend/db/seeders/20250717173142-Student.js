@@ -16,16 +16,12 @@ module.exports = {
             last_name: 'Tabesh',
             email: 'shtabesh@bu.edu',
           },
+          {
+            first_name: 'Sharif',
+            last_name: 'Rezaie',
+            email: 'shtabesh02@yahoo.com',
+          },
         ], { validate: true });
-    /**
-     * Add seed commands here.
-     *
-     * Example:
-     * await queryInterface.bulkInsert('People', [{
-     *   name: 'John Doe',
-     *   isBetaMember: false
-     * }], {});
-    */
   },
 
   async down (queryInterface, Sequelize) {
