@@ -5,16 +5,24 @@ import './Announcement.css'
 const Announcement = () => {
     const [subject, setSubject] = useState('');
     const [msg, setMsg] = useState('');
-    const [file, setFile] = useState();
+    const [attachments, setAttachments] = useState([]);
+    // const [fileNames, setFileNames] = useState([]);
 
     const dispatch = useDispatch();
     const handleSubmit = (e) => {
         e.preventDefault();
-        const newAnnouncement = {
-            subject,
-            msg
+        // const newAnnouncement = {
+        //     subject,
+        //     msg
+        // }
+        // dispatch(addAnnouncement(newAnnouncement));
+        const formData = new FormData();
+        formData.append('subject', subject);
+        formData.append('msg', msg);
+        for(let file of attachments){
+            formData.append('attachments', file)
         }
-        dispatch(addAnnouncement(newAnnouncement));
+        dispatch(addAnnouncement(formData))
         console.log('after click')
     }
     return (
@@ -29,7 +37,7 @@ const Announcement = () => {
                 <textarea name="msg" id="msg" value={msg} onChange={e => setMsg(e.target.value)} rows={5}></textarea>
 
                 <label htmlFor="">Attach your files</label>
-                <input type="file" name="" id=""  onChange={e =>e.target.files}/>
+                <input type="file" name="" id="" multiple onChange={e =>setAttachments(e.target.files)}/>
                 <button type='submit'>Publish</button>
             </form>
         </div>

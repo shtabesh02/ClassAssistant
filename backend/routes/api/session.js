@@ -9,6 +9,8 @@ const router = express.Router();
 const { check } = require('express-validator');
 const { handleValidationErrors } = require('../../utils/validation');
 
+router.use(express.json());
+
 const validateLogin = [
   check('credential')
     .exists({ checkFalsy: true })
@@ -22,6 +24,7 @@ const validateLogin = [
 
 // Login
 router.post('/', validateLogin, async (req, res, next) => {
+  console.log('req.body from session api: ', req.body)
     const { credential, password } = req.body;
 
     // console.log('cred: ', credential)

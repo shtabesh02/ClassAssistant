@@ -15,14 +15,15 @@ const transporter = nodemailer.createTransport({
  * @param {string} subject - Email subject
  * @param {string} message - Email content
  */
-const sendEmail = async (recipients, subject, message) => {
+const sendEmail = async (recipients, subject, message, attachments) => {
     // console.log('Using pass:', process.env.EMAIL_PASS);
   try {
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
       to: recipients, // array of emails
       subject: subject,
-      text: message
+      text: message,
+      attachments
     });
     console.log("Emails sent successfully.");
   } catch (err) {

@@ -8,14 +8,27 @@ const add_announcement = (announcement) => {
         announcement
     }
 }
+
+
+const getCookie = (name) => {
+  const cookie = document.cookie
+    .split('; ')
+    .find(row => row.startsWith(name + '='));
+  return cookie ? decodeURIComponent(cookie.split('=')[1]) : null;
+}
+
 // thunk action to add new announcement
 export const addAnnouncement = (announcement) => async (dispatch) => {
-    console.log('announcement: ', announcement)
-    const response = await csrfFetch('/api/announcement', {
+    const token = getCookie('XSRF-TOKEN'); 
+    console.log('attachments: ', announcement)
+    const response = await fetch('/api/announcement', {
         method: 'POST',
+        credential: 'include',
+        headers: {'X-CSRF-TOKEN': token},
+        body: announcement
         // headerr: {'Content-Type': 'multipart/form-data'},
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify(announcement)
+        // headers: {'Content-Type': 'application/json'},
+        // body: JSON.stringify(announcement)
     });
     if(response.ok){
         const data = await response.json();

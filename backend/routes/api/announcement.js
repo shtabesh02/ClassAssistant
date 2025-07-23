@@ -1,9 +1,23 @@
 const router = require('express').Router();
 const { Announcement, Student } = require('../../db/models');
 const { sendEmail } = require('../../utils/mailer');
+const multer = require('multer');
+const path = require('path');
+const fs = require('fs');
+
+// Set up multer
+const storage = multer.diskStorage({
+  destination: function (req, file, cb){
+    cb(null, 'uploads/');
+  },
+  filename: function (req, file, cb){
+    cb(null, Date.now() + '_' + file.originalname);
+  }
+});
+const upload = multer({storage});
 
 // Add new announcement
-router.post('/', async (req, res) => {
+router.post('/', upload.array('attachments'), async (req, res) => {
   try {
     const { subject, msg } = req.body;
     console.log('req.body: ', req.body)
@@ -14,8 +28,15 @@ router.post('/', async (req, res) => {
     const students = await Student.findAll({ attributes: ['email'] });
     const emailList = students.map(student => student.email);
 
+    // Prepare attachment for Nodemailer
+    const attachments = req.files.map(file => ({
+      filename: file.originalname,
+      path: file.path
+    }))
+
+
     // Send email
-    await sendEmail(emailList, subject, msg);
+    await sendEmail(emailList, subject, msg, attachments);
 
     return res.json({ announcement, emailStatus: "Emails sent" });
   } catch (err) {
