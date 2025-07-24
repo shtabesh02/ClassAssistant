@@ -31,7 +31,8 @@
     "per-env": "^1.0.2",
     "pg": "^8.16.2",
     "sequelize": "^6.37.7",
-    "sequelize-cli": "^6.6.3"
+    "sequelize-cli": "^6.6.3",
+    "xlsx": "^0.18.5"
   },
   "devDependencies": {
     "dotenv-cli": "^8.0.0",
