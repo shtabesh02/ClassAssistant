@@ -1,0 +1,42 @@
+.announcements {
+  padding: 24px;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.announcements h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 24px;
+}
+
+.one-announcement {
+  background-color: #fdfdfd;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+  border-left: 4px solid #3498db;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.one-announcement b {
+  font-size: 1.1rem;
+  color: #34495e;
+}
+
+.one-announcement div:last-child {
+  color: #555;
+  margin-top: 6px;
+  line-height: 1.4;
+}
+
+/* Fallback message if no announcements */
+.announcements li {
+  list-style: none;
+  /* text-align: center; */
+  color: #7f8c8d;
+  font-style: italic;
+  padding: 16px 0;
+}

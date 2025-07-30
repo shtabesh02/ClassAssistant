@@ -1,5 +1,6 @@
 import { csrfFetch } from "./csrf";
 const NEW_ANNOUNCEMENT = 'publishanewannouncement';
+const LOADANNOUNCEMENTSdb = 'loadalltheannouncements';
 
 // regular action to add announcement
 const add_announcement = (announcement) => {
@@ -36,6 +37,25 @@ export const addAnnouncement = (announcement) => async (dispatch) => {
     }
 }
 
+
+// regular action to load announcemnts to redux
+const loadAnncments = (announcements) => {
+    return {
+        type: LOADANNOUNCEMENTSdb,
+        announcements
+    }
+}
+// thunk action to load announcements from db
+export const loadannouncements = () => async (dispatch) => {
+    // console.log('got hit...');
+    const response = await csrfFetch(`/api/announcement`);
+    // console.log('response at redux: ', response)
+    if(response.ok){
+        const data = await response.json();
+        dispatch(loadAnncments(data));
+    }
+}
+
 const initalState = {
     announcement: {}
 }
@@ -43,6 +63,9 @@ const addAnnouncementReducer = (state = initalState, action) => {
     switch(action.type){
         case NEW_ANNOUNCEMENT: {
             return {...state, announcement: action.announcement}
+        }
+        case LOADANNOUNCEMENTSdb: {
+            return {announcement: action.announcements}
         }
         default:
             return state

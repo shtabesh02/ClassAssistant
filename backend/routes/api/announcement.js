@@ -45,6 +45,13 @@ router.post('/', upload.array('attachments'), async (req, res) => {
   }
 });
 
+// Load announcements
+router.get(`/`, async (req, res) => {
+  const announcements = await Announcement.findAll();
+  // console.log('announcement from db: ', announcements)
+  return res.status(200).json(announcements);
+});
+
 module.exports = router;
 
 // const router = require('express').Router();

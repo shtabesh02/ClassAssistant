@@ -11,17 +11,17 @@ function Settings() {
                 <NavLink to={`/announcements`}>Announcements</NavLink>
             </li>
             <li>
-                <NavLink>List of students</NavLink>
+                <NavLink to={`/students`}>List of students</NavLink>
             </li>
             <li>
-                <NavLink>Assignments</NavLink>
+                <NavLink to={`/assignments`}>Assignments</NavLink>
             </li>
             <li>
-                <NavLink>Quizzes</NavLink>
+                <NavLink to={`/quizzes`}>Quizzes</NavLink>
             </li>
-            <li>
+            {/* <li>
                 <NavLink>Classes</NavLink>
-            </li>
+            </li> */}
         </ul>
     </div>
   )

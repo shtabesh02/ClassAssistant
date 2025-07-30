@@ -1,0 +1,53 @@
+.quizz {
+  padding: 24px;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.quizz h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 24px;
+}
+
+/* Each quiz container */
+.quizz > div {
+  background-color: #f4f6f8;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+  border-left: 4px solid #3498db;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Title */
+.quizz > div span:nth-child(1) {
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 1.1rem;
+}
+
+/* Due date */
+.quizz > div span:nth-child(2) {
+  color: #2980b9;
+  font-size: 0.95rem;
+}
+
+/* Description */
+.quizz > div span:nth-child(3) {
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Fallback message when no quizzes */
+.quizz p {
+  text-align: center;
+  color: #888;
+  font-style: italic;
+  padding: 16px 0;
+}

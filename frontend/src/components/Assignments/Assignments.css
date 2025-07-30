@@ -1,0 +1,70 @@
+.assignments {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 50px;
+  background-color: #fdfdfd;
+  border: 1px solid #e1e1e1;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.assignments h1 {
+  text-align: center;
+  font-size: 24px;
+  color: #2c3e50;
+  margin-bottom: 24px;
+}
+
+.assignments form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.assignments label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #34495e;
+}
+
+.assignments input[type="text"],
+.assignments input[type="datetime"],
+.assignments textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+.assignments input[type="text"]:focus,
+.assignments input[type="datetime"]:focus,
+.assignments textarea:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+.assignments textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.assignments button {
+  padding: 12px 16px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.assignments button:hover {
+  background-color: #2980b9;
+}

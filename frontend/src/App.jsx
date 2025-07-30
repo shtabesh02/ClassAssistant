@@ -7,6 +7,9 @@ import * as sessionActions from './store/session';
 import Home from './components/Home';
 import Settings from './components/Settings';
 import Announcement from './components/Announcement';
+import Students from './components/Students';
+import Assignments from './components/Assignments';
+import Quizzes from './components/Quizzes';
 
 
 function Layout() {
@@ -42,6 +45,18 @@ const router = createBrowserRouter([
       {
         path: '/announcements',
         element: <Announcement />
+      },
+      {
+        path: '/students',
+        element: <Students />
+      },
+      {
+        path: '/assignments',
+        element: <Assignments />
+      },
+      {
+        path: '/quizzes',
+        element: <Quizzes />
       },
     ]
   }

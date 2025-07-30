@@ -3,11 +3,17 @@ import thunk from 'redux-thunk';
 
 import sessionReducer from './session';
 import addAnnouncementReducer from './announcement';
+import studentsReducer from './students';
+import quizReducer from './quiz';
+import assignmentReducer from './assignment';
 
 const rootReducer = combineReducers({
   // ADD REDUCERS HERE
   session: sessionReducer,
   announcement: addAnnouncementReducer,
+  students: studentsReducer,
+  quiz: quizReducer,
+  assignment: assignmentReducer
 });
 
 let enhancer;
