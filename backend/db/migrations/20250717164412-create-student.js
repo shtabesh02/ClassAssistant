@@ -3,8 +3,7 @@
 
 let options = {};
 if (process.env.NODE_ENV === 'production') {
-  //options.schema = process.env.SCHEMA;  // define your schema in options object
-  await queryInterface.sequelize.createSchema(process.env.SCHEMA, {});
+  options.schema = process.env.SCHEMA;  // define your schema in options object
 }
 
 module.exports = {
@@ -38,6 +37,5 @@ module.exports = {
   async down(queryInterface, Sequelize) {
     options.tableName = "Students";
     return queryInterface.dropTable(options);
-    // await queryInterface.dropTable('Students');
   }
 };
