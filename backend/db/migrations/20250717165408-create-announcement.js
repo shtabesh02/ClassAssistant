@@ -32,11 +32,11 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE
       }
-    });
+    }, options);
   },
   async down(queryInterface, Sequelize) {
     // await queryInterface.dropTable('Announcements');
     options.tableName = "Announcements";
-    return queryInterface.dropTable("Announcements");
+    return queryInterface.dropTable("Announcements", options);
   }
 };
