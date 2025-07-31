@@ -28,7 +28,7 @@ module.exports = {
     options.tableName = 'Students';
     const Op = Sequelize.Op;
     return queryInterface.bulkDelete(options, {
-      email: { [Op.in]: ['shtabesh@bu.edu'] }
+      email: { [Op.in]: ['shtabesh@bu.edu', 'shtabesh02@yahoo.com'] }
     }, {});
     /**
      * Add commands to revert seed here.
