@@ -7,6 +7,7 @@ function Assignments() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        
         // const assignment = {
         //     title,
         //     dueDate,
