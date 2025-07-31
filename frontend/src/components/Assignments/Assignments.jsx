@@ -7,11 +7,11 @@ function Assignments() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const assignment = {
-            title,
-            dueDate,
-            description
-        }
+        // const assignment = {
+        //     title,
+        //     dueDate,
+        //     description
+        // }
         alert('This page is under progress...')
     }
   return (

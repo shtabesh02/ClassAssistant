@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+// import { useDispatch } from 'react-redux';
 import './Quizzes.css';
 
 function Quizzes() {
@@ -7,14 +7,14 @@ function Quizzes() {
     const [dueDate, setDueDate] = useState('');
     const [description, setDescription] = useState('');
 
-    const dispatch = useDispatch();
+    // const dispatch = useDispatch();
     const handleSubmit = (e) => {
         e.preventDefault();
-        const quiz = {
-            title,
-            dueDate,
-            description
-        }
+        // const quiz = {
+        //     title,
+        //     dueDate,
+        //     description
+        // }
 
     }
   return (
