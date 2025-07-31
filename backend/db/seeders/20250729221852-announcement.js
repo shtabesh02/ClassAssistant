@@ -20,7 +20,7 @@ module.exports = {
         msg: 'Your group presentation is held on Aug 5th.'
       },
 
-    ]);
+    ], {validate: true});
     /**
      * Add seed commands here.
      *

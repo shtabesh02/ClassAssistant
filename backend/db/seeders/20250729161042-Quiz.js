@@ -18,7 +18,7 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date()
       }
-    ])
+    ], {validate: true});
     /**
      * Add seed commands here.
      *
