@@ -1,7 +1,9 @@
-import { useState } from 'react'
+import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addAnnouncement } from '../../store/announcement';
-import './Announcement.css'
+import { useNavigate } from 'react-router-dom';
+import './Announcement.css';
+
 const Announcement = () => {
     const [subject, setSubject] = useState('');
     const [msg, setMsg] = useState('');
@@ -9,6 +11,7 @@ const Announcement = () => {
     const [fileNames, setFileNames] = useState([]);
 
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     const handleAttachment = (e) => {
         const newFiles = Array.from(e.target.files);
@@ -27,22 +30,20 @@ const Announcement = () => {
         setFileNames(mergedFiles.map(f => f.name));
     };
 
-
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // const newAnnouncement = {
-        //     subject,
-        //     msg
-        // }
-        // dispatch(addAnnouncement(newAnnouncement));
         const formData = new FormData();
         formData.append('subject', subject);
         formData.append('msg', msg);
         for (let file of attachments) {
             formData.append('attachments', file)
         }
-        dispatch(addAnnouncement(formData))
-        console.log('after click')
+        await dispatch(addAnnouncement(formData))
+        .then(() => {
+            alert('Email sent succesfull.')
+            navigate(`/`)
+        });
+        
     }
     return (
         <div className="announcement">
