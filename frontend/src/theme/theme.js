@@ -8,7 +8,7 @@ const theme = createTheme({
       main: '#007BFF', // MD3 primary color
     },
     secondary: {
-      main: '#BED4EB',
+      main: '#dfeefeff',
     },
      success: {
       main: '#1F3B66',
