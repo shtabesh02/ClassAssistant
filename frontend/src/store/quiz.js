@@ -19,6 +19,14 @@ export const loadallquizzes = () => async (dispatch) => {
     }
 }
 
+// Thunk action to add new quiz
+export const addAQuiz = (quiz) => async (dispatch) => {
+    const response = await csrfFetch(`api/quiz`, {
+        method: 'POST',
+        body: JSON.stringify(quiz)
+    });
+}
+
 const initalState = {
     quiz: {}
 }

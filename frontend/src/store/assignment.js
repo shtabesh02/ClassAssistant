@@ -19,6 +19,17 @@ export const loadassignments = () => async (dispatch) => {
     }
 }
 
+
+// Thunk action to insert new assignment
+export const addAnAssignment = (assignment) => async (dispatch) => {
+    console.log('hit...')
+    const response = await csrfFetch(`/api/assignment`, {
+        method: 'POST',
+        body: JSON.stringify(assignment)
+    });
+    console.log('response: ', response.json());
+}
+
 const initalState = {
     assignment: {}
 }

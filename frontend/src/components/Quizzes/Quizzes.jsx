@@ -1,21 +1,28 @@
 import { useState } from 'react';
-// import { useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import './Quizzes.css';
+import { addAQuiz } from '../../store/quiz';
+import { useNavigate } from 'react-router-dom';
 
 function Quizzes() {
     const [title, setTitle] = useState('');
     const [dueDate, setDueDate] = useState('');
     const [description, setDescription] = useState('');
 
-    // const dispatch = useDispatch();
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
     const handleSubmit = (e) => {
         e.preventDefault();
-        // const quiz = {
-        //     title,
-        //     dueDate,
-        //     description
-        // }
-
+        const quiz = {
+            title,
+            dueDate,
+            description
+        }
+        dispatch(addAQuiz(quiz))
+        .then(() => {
+            alert('Quiz added successfully.');
+            navigate('/');
+        });
     }
   return (
     <div className="quizzes">

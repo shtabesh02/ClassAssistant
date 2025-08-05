@@ -1,19 +1,28 @@
 import { useState } from "react"
+import { useDispatch } from 'react-redux';
 import './Assignments.css'
+import { addAnAssignment } from "../../store/assignment";
+import { useNavigate } from "react-router-dom";
 function Assignments() {
     const [title, setTitle] = useState('');
     const [dueDate, setDueDate] = useState('');
     const [description, setDescription] = useState('');
 
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
     const handleSubmit = (e) => {
         e.preventDefault();
         
-        // const assignment = {
-        //     title,
-        //     dueDate,
-        //     description
-        // }
-        alert('This page is under progress...')
+        const assignment = {
+            title,
+            dueDate,
+            description
+        }
+        dispatch(addAnAssignment(assignment))
+        .then(() => {
+            alert('Th assignment added successfully.')
+            navigate('/');
+        });
     }
   return (
     <div className="assignments">
