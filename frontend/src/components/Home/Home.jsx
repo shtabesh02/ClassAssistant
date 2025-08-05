@@ -2,6 +2,7 @@ import Announcement from "./Announcement"
 import Assignment from "./Assignment"
 import Quiz from "./Quiz"
 import './Home.css'
+import { Button, Typography, Container } from '@mui/material';
 
 function Home() {
   return (
@@ -18,6 +19,14 @@ function Home() {
           <Announcement />
         </div>
       </div>
+      <Container>
+        <Typography variant="h4" gutterBottom>
+          Hello, MUI v5!
+        </Typography>
+        <Button variant="contained" color="primary">
+          Click Me
+        </Button>
+       </Container>
     </div>
 
   )
