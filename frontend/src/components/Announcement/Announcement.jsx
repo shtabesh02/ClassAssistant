@@ -51,10 +51,10 @@ const Announcement = () => {
 
             <form className="form" onSubmit={handleSubmit}>
                 <label htmlFor="">Subject</label>
-                <input type="text" id='subject' value={subject} onChange={e => setSubject(e.target.value)} />
+                <input type="text" id='subject' required value={subject} onChange={e => setSubject(e.target.value)} />
 
                 <label htmlFor="">Message</label>
-                <textarea name="msg" id="msg" value={msg} onChange={e => setMsg(e.target.value)} rows={5}></textarea>
+                <textarea name="msg" id="msg" required value={msg} onChange={e => setMsg(e.target.value)} rows={5}></textarea>
 
                 <label htmlFor="">Attach your files</label>
                 <input type="file" name="" id="" multiple onChange={handleAttachment} />
