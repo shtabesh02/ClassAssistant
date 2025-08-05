@@ -4,20 +4,38 @@
 ![DB Schema](./images/caschema.png)
 <!-- <img src="schema.png" alt="DB Schema" width="500"> -->
 
-## API Documentation
-
 
 ## Team Members
 - Yitian
-- Amir
 - Shir
 - Henry
 - Hemanth
 
+Class Assistant is a web application designed to enhance the university course experience by addressing a key limitation of the Blackboard platform. The project's core purpose is to provide professors with a reliable way to send announcements with file attachments—a feature not supported by Blackboard's native email function. The application serves as a centralized platform for professors to manage and distribute course materials and for students to receive them in a timely and organized manner. 
 
+Live Demo: https://buclassassistant.onrender.com/ 
 
-Class Assistant is an application designed to help students stay organized and never miss important deadlines or class sessions. It provides timely reminders for upcoming classes, assignment due dates, quizzes, and campus events. Professors can also use the platform to send general announcements to the class. In addition, the application serves as a centralized hub for frequently asked questions (FAQs) and other essential course resources.
+## Core Features
+Professor Admin Panel: A secure dashboard for professors to manage their courses. 
 
+Announcement System: Professors can create announcements, attach files, and schedule them for automated distribution. 
+
+Student Roster Management: Easily upload and manage student lists via .xlsx files. 
+
+Event & Assignment Creation: Post important dates for quizzes and assignments. 
+
+Student Notifications: Students can subscribe to receive timely email notifications for new announcements and events. 
+
+## Tech Stack
+This project uses the following technologies and tools:
+
+- Frontend: React, Redux, Material-UI (MUI), CSS3
+- Backend: Node.js, Express.js
+- Database: PostgreSQL with Sequelize ORM
+- File Handling: Multer for uploads and AWS S3 for storage.
+- Email Service: Nodemailer for automated notifications.
+- Deployment: Render for hosting the web service and database.
+  
 ### a short note:
 ```
 npx sequelize model:generate --name User --attributes first_name:string,last_name:string
