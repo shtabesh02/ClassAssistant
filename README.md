@@ -1,4 +1,4 @@
-# ClassAssistant
+# BU ClassAssistant
 
 ## DB Schema
 ![DB Schema](./images/caschema.png)
@@ -11,7 +11,7 @@
 - Henry
 - Hemanth
 
-Class Assistant is a web application designed to enhance the university course experience by addressing a key limitation of the Blackboard platform. The project's core purpose is to provide professors with a reliable way to send announcements with file attachments—a feature not supported by Blackboard's native email function. The application serves as a centralized platform for professors to manage and distribute course materials and for students to receive them in a timely and organized manner. 
+BU Class Assistant is a web application designed to enhance the university course experience by addressing a key limitation of the Blackboard platform. The project's core purpose is to provide professors with a reliable way to send announcements with file attachments, a feature not supported by Blackboard's native email function. The application serves as a centralized platform for professors to manage and distribute course materials and for students to receive them in a timely and organized manner. 
 
 Live Demo: https://buclassassistant.onrender.com/ 
 
@@ -28,7 +28,6 @@ Student Notifications: Students can subscribe to receive timely email notificati
 
 ## Tech Stack
 This project uses the following technologies and tools:
-
 - Frontend: React, Redux, Material-UI (MUI), CSS3
 - Backend: Node.js, Express.js
 - Database: PostgreSQL with Sequelize ORM
