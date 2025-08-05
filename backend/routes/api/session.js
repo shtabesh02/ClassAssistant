@@ -24,7 +24,7 @@ const validateLogin = [
 
 // Login
 router.post('/', validateLogin, async (req, res, next) => {
-  console.log('req.body from session api: ', req.body)
+  // console.log('req.body from session api: ', req.body)
     const { credential, password } = req.body;
 
     // console.log('cred: ', credential)

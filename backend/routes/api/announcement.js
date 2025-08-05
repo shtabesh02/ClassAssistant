@@ -20,7 +20,7 @@ const upload = multer({storage});
 router.post('/', upload.array('attachments'), async (req, res) => {
   try {
     const { subject, msg } = req.body;
-    console.log('req.body: ', req.body)
+    // console.log('req.body: ', req.body)
     // Create announcement
     const announcement = await Announcement.create({ subject, msg });
 

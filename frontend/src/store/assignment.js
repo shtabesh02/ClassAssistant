@@ -12,7 +12,7 @@ const addAssingmenttostate = (assignments) => {
 // thunk action to load assignment from db
 export const loadassignments = () => async (dispatch) => {
     const response = await csrfFetch(`/api/assignment`);
-    console.log('assignments from thunk: ', response)
+    // console.log('assignments from thunk: ', response)
     if(response.ok){
         const data = await response.json();
         dispatch(addAssingmenttostate(data));
@@ -21,13 +21,13 @@ export const loadassignments = () => async (dispatch) => {
 
 
 // Thunk action to insert new assignment
-export const addAnAssignment = (assignment) => async (dispatch) => {
-    console.log('hit...')
-    const response = await csrfFetch(`/api/assignment`, {
+export const addAnAssignment = (assignment) => async () => {
+    // console.log('hit...')
+    await csrfFetch(`/api/assignment`, {
         method: 'POST',
         body: JSON.stringify(assignment)
     });
-    console.log('response: ', response.json());
+    // console.log('response: ', response.json());
 }
 
 const initalState = {

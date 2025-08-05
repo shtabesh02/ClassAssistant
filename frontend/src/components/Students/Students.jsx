@@ -19,7 +19,8 @@ const Students = () => {
         if(!excelFile) return alert('Please selecte the list of students.');
         const formData = new FormData();
         formData.append('file', excelFile);
-        dispatch(importStudents(formData)).then(() => {
+        dispatch(importStudents(formData))
+        .then(() => {
             dispatch(loadStudents());
             setExcelFile(null);
         })

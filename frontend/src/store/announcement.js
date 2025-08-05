@@ -21,7 +21,7 @@ const getCookie = (name) => {
 // thunk action to add new announcement
 export const addAnnouncement = (announcement) => async (dispatch) => {
     const token = getCookie('XSRF-TOKEN'); 
-    console.log('attachments: ', announcement)
+    // console.log('attachments: ', announcement)
     const response = await fetch('/api/announcement', {
         method: 'POST',
         credential: 'include',

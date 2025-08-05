@@ -12,7 +12,7 @@ const load_students = (students) => {
 // thunk action to load the students
 export const loadStudents = () => async (dispatch) =>{
     const response = await csrfFetch(`/api/students`);
-    console.log('students at the redux: ', response)
+    // console.log('students at the redux: ', response)
     if(response.ok){
         const data = await response.json();
 
@@ -29,7 +29,7 @@ const getCookie = (name) => {
 }
 
 export const importStudents = (studentslist) => async (dispatch) => {
-    console.log('stdent on the way to db from store: ', studentslist)
+    // console.log('stdent on the way to db from store: ', studentslist)
     const token = getCookie('XSRF-TOKEN'); 
     const response = await fetch('/api/students/import', {
         method: 'POST',

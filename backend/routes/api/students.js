@@ -17,15 +17,15 @@ router.get('/', async (req, res) => {
 
 const upload = multer({storage: multer.memoryStorage()});
 router.post('/import', upload.single('file'), async (req, res) => {
-    console.log('import hit the database.')
-    console.log('req.bod: ', req.file)
+    // console.log('import hit the database.')
+    // console.log('req.bod: ', req.file)
     if(!req.file) return res.status(400).json({error: 'No file uploaded.'});
 
     const workbook = xlsx.read(req.file.buffer, {type: 'buffer'});
     const sheetName = workbook.SheetNames[0];
     const data = xlsx.utils.sheet_to_json(workbook.Sheets[sheetName]);
 
-    console.log('extracted data: ', data)
+    // console.log('extracted data: ', data)
     const formattedStudents = data.map(row => ({
         first_name: row.first_name,
         last_name: row.last_name,

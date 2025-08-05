@@ -10,7 +10,7 @@ import './ProfileButton.css'
 
 function ProfileButton({ user }) {
 
-  console.log('user from session: ', user)
+  // console.log('user from session: ', user)
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [showMenu, setShowMenu] = useState(false);

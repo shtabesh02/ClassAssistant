@@ -9,7 +9,7 @@ router.get('/', async (req, res) => {
 });
 
 router.post('/', express.json(), async (req, res) => {
-    console.log('req.body quiz: ', req.body);
+    // console.log('req.body quiz: ', req.body);
     const {title, dueDate, description} = req.body;
     const newQuiz = await Quiz.create({title, due_date: dueDate, description});
     res.status(200).json(newQuiz);
