@@ -11,15 +11,17 @@ function Quiz() {
   }, [dispatch])
   return (
     <div className="quizz">
-        <h1>Upcoming Quizzes</h1>
+      <h1>Upcoming Quizzes</h1>
 
-          {quizzes.length > 0 ? (
-            quizzes.map(quiz => (
-              <div key={quiz.id}><span>{quiz.title}</span><span>{quiz.due_date}</span><span>{quiz.description}</span></div>
-            ))
-          ):(
-            <p>There is not quiz</p>
-          )}
+      {quizzes.length > 0 ? (
+        quizzes.map(quiz => (
+          <div key={quiz.id}><span>{quiz.title}</span><span> <label htmlFor="">Due Date: </label>
+            { new Date(quiz.due_date).toLocaleDateString()} - { new Date(quiz.due_date).toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'})}
+          </span><span>{quiz.description}</span></div>
+        ))
+      ) : (
+        <p>There is not quiz</p>
+      )}
 
     </div>
   )

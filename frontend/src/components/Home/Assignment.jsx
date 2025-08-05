@@ -14,7 +14,9 @@ function Assignment() {
 
           {assignments.length > 0 ? (
             assignments.map((assignment) => (
-              <div key={assignment.id}><span>{assignment.title}</span><span>{assignment.due_date}</span><span>{assignment.description}</span></div>
+              <div key={assignment.id}><span>{assignment.title}</span><span><label htmlFor="">Due Date: </label>
+                {new Date(assignment.due_date).toLocaleDateString()} - {new Date(assignment.due_date).toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'})}
+                </span><span>{assignment.description}</span></div>
             ))
           ):(
             <p>There is not assignment.</p>
