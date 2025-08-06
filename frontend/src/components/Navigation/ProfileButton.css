@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     transition: box-shadow 0.5s;
-    border: 1px solid rgb(212, 221, 229);
+    border: 1px solid #dfeefeff;
     border-radius: 40px;
     padding: 5px;
  
@@ -11,25 +11,26 @@
     padding: 5px;
     border-radius: 50%;
     border: none;
-    color: rgb(162, 153, 139);
+    color: #1F3B66;
 }
 
 .fa-bars{
     padding: 5px 10px 5px;
-    color: rgb(162, 153, 139);
+    color:#1F3B66;
 }
 
 
 .profileIcon:hover{
-    box-shadow: 0 0 20px rgba(0, 123, 255, 0.5);
+    box-shadow: 0 0 20px #007BFF;
 }
 
 .toggle-button{
     border: none;
-    background-color: rgb(255, 255, 255);
+    background-color: #dfeefeff;
 }
 
 .profile-dropdown{
     position: fixed;
     z-index: 100;
+    background-color: darkblue;
 }

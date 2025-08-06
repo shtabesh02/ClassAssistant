@@ -1,70 +1,192 @@
-.assignments {
-  max-width: 600px;
-  margin: 40px auto;
-  padding: 50px;
-  background-color: #fdfdfd;
-  border: 1px solid #e1e1e1;
+/* Assignments.css */
+
+.assignments-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  
+}
+
+.assignments-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 0 0.5rem;
+}
+
+.header-icon {
+  font-size: 2rem;
+  color: #374151;
+}
+
+.assignments-header h1 {
+  font-size: 2rem;
+  font-weight: 400;
+  font-family: 'DM Mono', monospace;
+  color: #dfeefeff;
+  margin: 0;
+}
+
+.assignments-card {
+  background: #dfeefeff;
+  border: 1px solid #e5e7eb;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 
-.assignments h1 {
-  text-align: center;
-  font-size: 24px;
-  color: #2c3e50;
-  margin-bottom: 24px;
+.card-header {
+  padding: 1.5rem 2rem;
+  background: #dfeefeff;
+  font-family: DM Mono, monospace;
+  border-bottom: 1px solid #e5e7eb;
+  border-left: 4px solid #fbbf24;
 }
 
-.assignments form {
+.card-header h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #374151;
+  margin: 0;
+}
+
+.assignment-form {
+  padding: 2rem;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 1.5rem;
 }
 
-.assignments label {
-  display: block;
-  margin-bottom: 6px;
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-label {
+  font-size: 0.875rem;
   font-weight: 500;
-  color: #34495e;
+  color: #374151;
+  margin: 0;
 }
 
-.assignments input[type="text"],
-.assignments input[type="datetime"],
-.assignments textarea {
-  width: 100%;
-  padding: 10px 12px;
-  border: 1px solid #ccc;
+.form-input,
+.form-textarea {
+  padding: 0.75rem 1rem;
+  border: 1px solid #1F3B66;
   border-radius: 6px;
-  font-size: 14px;
-  background-color: #fff;
-  transition: border-color 0.3s ease;
+  font-size: 0.875rem;
+  color: #1F3B66;
+  background-color: #dfeefeff;
+  transition: all 0.2s ease;
+  font-family: inherit;
 }
 
-.assignments input[type="text"]:focus,
-.assignments input[type="datetime"]:focus,
-.assignments textarea:focus {
-  border-color: #3498db;
+.form-input:focus,
+.form-textarea:focus {
   outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
 }
 
-.assignments textarea {
-  min-height: 100px;
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: #9ca3af;
+}
+
+.date-input {
+  max-width: 300px;
+}
+
+.form-textarea {
   resize: vertical;
+  min-height: 100px;
+  line-height: 1.5;
 }
 
-.assignments button {
-  padding: 12px 16px;
-  background-color: #3498db;
-  color: #fff;
+.submit-button {
+  align-self: flex-start;
+  padding: 0.75rem 1.5rem;
+  background-color: #3b82f6;
+  color: #ffffff;
   border: none;
-  font-size: 16px;
-  font-weight: 500;
   border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.2s ease;
+  font-family: inherit;
 }
 
-.assignments button:hover {
-  background-color: #2980b9;
+.submit-button:hover {
+  background-color: #2563eb;
+  transform: translateY(-1px);
+}
+
+.submit-button:active {
+  transform: translateY(0);
+}
+
+.submit-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .assignments-container {
+    margin: 1rem;
+    padding: 0;
+    background-color: #dfeefeff;
+  }
+  
+  .assignments-header {
+    margin-bottom: 1.5rem;
+  }
+  
+  .assignments-header h1 {
+    font-size: 1.75rem;
+  }
+  
+  .assignment-form {
+    padding: 1.5rem;
+  }
+  
+  .card-header {
+    padding: 1.25rem 1.5rem;
+  }
+  
+  .submit-button {
+    align-self: stretch;
+  }
+}
+
+@media (max-width: 480px) {
+  .assignments-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .header-icon {
+    font-size: 1.5rem;
+  }
+  
+  .assignments-header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .assignment-form {
+    padding: 1rem;
+  }
+  
+  .card-header {
+    padding: 1rem;
+  }
+  
+  .card-header h2 {
+    font-size: 1.125rem;
+  }
 }
