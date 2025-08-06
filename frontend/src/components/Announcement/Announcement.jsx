@@ -44,12 +44,16 @@ const Announcement = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     const formData = new FormData();
     formData.append('subject', subject);
     formData.append('msg', msg);
     for (let file of attachments) {
       formData.append('attachments', file);
     }
+
+    console.log('after click');
+
     await dispatch(addAnnouncement(formData)).then(() => {
       alert('Email sent successfully.');
       navigate(`/`);
@@ -62,24 +66,26 @@ const Announcement = () => {
         <Typography variant="h4" component="div" sx={{ mr: 1 }}>
           📢
         </Typography>
-        <Typography variant="h4" sx={{color:"secondary.main", }}>Announcements</Typography>
+        <Typography variant="h4" sx={{ color: 'secondary.main' }}>
+          Announcements
+        </Typography>
       </Box>
 
       <Card sx={{ backgroundColor: 'secondary.main' }}>
         <CardContent>
-          <Typography variant="h5" gutterBottom sx={{color:"success.main"}}>
+          <Typography variant="h5" gutterBottom sx={{ color: 'success.main' }}>
             Create New Announcement
           </Typography>
 
           <Box component="form" onSubmit={handleSubmit} noValidate>
             <Stack spacing={3}>
-
               <TextField
                 label="Subject"
                 value={subject}
                 onChange={(e) => setSubject(e.target.value)}
                 fullWidth
                 placeholder="Enter announcement subject"
+                required
               />
 
               <TextField
@@ -90,6 +96,7 @@ const Announcement = () => {
                 multiline
                 minRows={6}
                 placeholder="Enter your announcement message"
+                required
               />
 
               <Box>
