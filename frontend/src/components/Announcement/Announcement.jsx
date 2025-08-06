@@ -80,6 +80,7 @@ const Announcement = () => {
                 onChange={(e) => setSubject(e.target.value)}
                 fullWidth
                 placeholder="Enter announcement subject"
+                required
               />
 
               <TextField
@@ -90,6 +91,7 @@ const Announcement = () => {
                 multiline
                 minRows={6}
                 placeholder="Enter your announcement message"
+                required
               />
 
               <Box>
