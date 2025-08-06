@@ -86,6 +86,8 @@ function ListView() {
       {groupedData.map((item, index) => (
         <Box key={index} sx={{ display: "flex", mb:0.5 }}>
           <Box
+          
+          
             sx={{
               width: 80,
               textAlign: "center",
@@ -115,18 +117,19 @@ function ListView() {
               {dayjs(item.date).diff(dayjs(), "day")}
             </Typography>
             <Typography variant="caption" sx={{color: "#1F3B66"}}>days</Typography>
-          </Box>
+          </Box >
 
           <Box
             display="flex"
             
             sx={{
-                borderTop: "6px solid #fff",
+                borderTop: "20px solid #f9fafe",
                 borderRadius:4, 
                 backgroundColor: "#eee", width: "100%" }}
           >
             {/* Left Column */}
             <Box
+             elevation={3}
               sx={{
                 width: "auto", // adjust width as needed
                 paddingRight: 2,
