@@ -10,7 +10,7 @@ import Announcement from './components/Announcement';
 import Students from './components/Students';
 import Assignments from './components/Assignments';
 import Quizzes from './components/Quizzes';
-
+import About from './components/About';
 
 function Layout() {
   const dispatch = useDispatch();
@@ -18,7 +18,7 @@ function Layout() {
 
   useEffect(() => {
     dispatch(sessionActions.restoreUser()).then(() => {
-      setIsLoaded(true)
+      setIsLoaded(true);
     });
   }, [dispatch]);
 
@@ -38,30 +38,14 @@ const router = createBrowserRouter([
   {
     element: <Layout />,
     children: [
-      {
-        path: '/',
-        element: <Home />
-      },
-      {
-        path: '/settings',
-        element: <Settings />
-      },
-      {
-        path: '/announcements',
-        element: <Announcement />
-      },
-      {
-        path: '/students',
-        element: <Students />
-      },
-      {
-        path: '/assignments',
-        element: <Assignments />
-      },
-      {
-        path: '/quizzes',
-        element: <Quizzes />
-      },
+      { path: '/', element: <Home /> },
+      { path: '/settings', element: <Settings /> },
+      { path: '/announcements', element: <Announcement /> },
+      { path: '/students', element: <Students /> },
+      { path: '/assignments', element: <Assignments /> },
+      { path: '/quizzes', element: <Quizzes /> },
+      { path: '/about', element: <About /> },
+
     ]
   }
 ]);
