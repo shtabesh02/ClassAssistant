@@ -23,10 +23,14 @@ function Layout() {
   }, [dispatch]);
 
   return (
-    <>
+    <div style={{ backgroundColor: '#1F3B66', minHeight: '100vh' }} className="min-h-screen bg-gray-50 text-gray-800">
       <Navigation isLoaded={isLoaded} />
-      {isLoaded && <Outlet />}
-    </>
+      {isLoaded && (
+        <main className="max-w-7xl mx-auto px-4 py-6">
+          <Outlet />
+        </main>
+      )}
+    </div>
   );
 }
 
