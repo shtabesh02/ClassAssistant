@@ -41,12 +41,12 @@ function Quizzes() {
         <Typography variant="h4" component="div" sx={{ mr: 2 }}>
           ✍🏽 
         </Typography>
-        <Typography variant="h4" sx={{color:"secondary.main", mb:1}}>Quizzes</Typography>
+        <Typography variant="h4" sx={{ color: "secondary.main", mb: 1 }}>Quizzes</Typography>
       </Box>
 
       <Card>
         <CardContent sx={{ backgroundColor: 'secondary.main' }}>
-          <Typography variant="h6" gutterBottom sx={{color:"success.main"}}>
+          <Typography variant="h6" gutterBottom sx={{ color: "success.main" }}>
             Create New Quiz
           </Typography>
 
