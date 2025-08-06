@@ -20,7 +20,7 @@ const theme = createTheme({
       main: '#FAB25B',
     },
     error: {
-      main: '#E7DCC4',
+      main: '#e7c4dbff',
     },
 
     // 👉 Custom color (not in default palette)
