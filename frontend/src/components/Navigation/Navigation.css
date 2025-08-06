@@ -59,6 +59,8 @@
   
   .profile-dropdown li:hover{
     background-color: #FFDE2D;
+    display: block;
+    width: auto;
   }
 
   .profile-dropdown:hover{

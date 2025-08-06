@@ -33,10 +33,13 @@ function Navigation({ isLoaded }) {
 
         {/* Navigation Buttons */}
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-          <Button color="success" sx={{ fontFamily: 'monospace' }} onClick={() => navigate('/')}>
+          <Button color="success" sx={{ fontFamily: 'monospace',   '&:hover': {
+      bgcolor: '#FFDE2D'
+    } }} onClick={() => navigate('/')}>
             Home
           </Button>
-          <Button color="success" sx={{ fontFamily: 'monospace' }} onClick={() => navigate('/about')}>
+          <Button color="success" sx={{ fontFamily: 'monospace', '&:hover': {
+      bgcolor: '#FFDE2D'} }} onClick={() => navigate('/about')}>
             About
           </Button>
             <div className='toggle-container'>
