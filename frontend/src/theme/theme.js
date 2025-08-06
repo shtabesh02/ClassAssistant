@@ -30,7 +30,7 @@ const theme = createTheme({
     },
   },
    typography: {
-    fontFamily: `'Roboto', 'DM Mono', 'Inter', 'Lato',`,
+    fontFamily: `'DM Mono', 'Inter', 'Lato',`,
     h1: {
       fontSize: '3rem',
       fontWeight: 700,
