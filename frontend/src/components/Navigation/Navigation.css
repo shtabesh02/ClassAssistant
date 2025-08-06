@@ -5,9 +5,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 4rem;
+    padding: 1rem000000 4rem;
     background-color: #ffffff;
-    color: #000000;
+    color: #1F3B66;
     border-bottom: 1px solid #bba2a2;
     margin-bottom: 3rem;
   }
@@ -45,23 +45,24 @@
     position: absolute;
     /* top: 100%; */
     right: 0;
-    background-color: #ffffff;
+    background-color: #dfeefeff;
     padding: 5px;
     margin: 5px;
     list-style: none;
     z-index: 1;
     cursor: pointer;
-    border: #f2eaea solid;
+    border: 1px #007BFF solid;
     border-radius: 10px;
+    color: #1F3B66
     /* cursor: pointer; */
   }
   
   .profile-dropdown li:hover{
-    background-color: #f7e9e9;
+    background-color: #FFDE2D;
   }
 
   .profile-dropdown:hover{
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+    box-shadow: 0 0 20px #007BFF; 
     transition: all 0.2s;
     cursor: pointer;
   }

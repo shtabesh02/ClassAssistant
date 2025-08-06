@@ -12,7 +12,10 @@ function Navigation({ isLoaded }) {
   const navigate = useNavigate();
 
   return (
-    <AppBar position="static" color="default" sx={{ bgcolor: 'secondary.main' }} elevation={1}>
+    <AppBar position="sticky" color="default" sx={{ bgcolor: 'secondary.main',  borderBottom: '1px solid #c2ccdcff', 
+    boxShadow: '0px 4px 10px rgb(24, 44, 84, 0.2)',  top: 0, // Ensures it sticks to top
+    zIndex: (theme) => theme.zIndex.drawer + 1 // Keeps it above other components
+     }} elevation={0}>
       <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
         {/* Logo + App name */}
         <Box sx={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }} onClick={() => navigate('/')}>
