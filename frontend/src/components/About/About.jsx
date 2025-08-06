@@ -8,7 +8,7 @@ import {
   Avatar,
   Link,
   Box,
-  useTheme
+  // useTheme
 } from '@mui/material';
 
 const teamMembers = [
@@ -39,7 +39,7 @@ const teamMembers = [
 ];
 
 function About() {
-  const theme = useTheme();
+  // const theme = useTheme();
 
   return (
     <Box sx={{ backgroundColor: '#1F3B66', minHeight: '100vh', py: 6, color: '#fff' }}>

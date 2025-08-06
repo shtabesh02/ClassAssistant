@@ -3,7 +3,7 @@ import Assignment from "./Assignment"
 import Quiz from "./Quiz"
 import ListView from './ListView'; // new component
 import './Home.css'
-import { Button, Typography, Container,  Box,
+import { Typography, Box,
   Tabs,
   Tab,
   Divider,
