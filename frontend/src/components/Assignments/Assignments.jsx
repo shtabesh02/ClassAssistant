@@ -1,6 +1,9 @@
 //Assignments.jsx:
 import { useState } from "react"
 import './Assignments.css'
+import { addAnAssignment } from "../../store/assignment"
+import { useDispatch } from "react-redux";
+import { useNavigate } from 'react-router-dom'
 
 function Assignments() {
     const [title, setTitle] = useState('');
@@ -12,12 +15,16 @@ function Assignments() {
     const handleSubmit = (e) => {
         e.preventDefault();
         
-        // const assignment = {
-        //     title,
-        //     dueDate,
-        //     description
-        // }
-        alert('This page is under progress...')
+        const assignment = {
+            title,
+            dueDate,
+            description
+        }
+        dispatch(addAnAssignment(assignment))
+        .then(() => {
+            alert('Th assignment added successfully.')
+            navigate('/');
+        });
     }
 
     return (
