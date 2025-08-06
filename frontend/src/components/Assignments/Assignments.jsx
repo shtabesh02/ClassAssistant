@@ -1,5 +1,7 @@
+//Assignments.jsx:
 import { useState } from "react"
 import './Assignments.css'
+
 function Assignments() {
     const [title, setTitle] = useState('');
     const [dueDate, setDueDate] = useState('');
@@ -15,27 +17,59 @@ function Assignments() {
         // }
         alert('This page is under progress...')
     }
-  return (
-    <div className="assignments">
-        <h1>Add the assignments here</h1>
-        <form action="" onSubmit={handleSubmit}>
-            <div className="title">
-                <label htmlFor="">Title:</label>
-                <input type="text" name="" id="" value={title} onChange={e => setTitle(e.target.value)}/>
-            </div>
-            <div className="duedate">
-                <label htmlFor="">Due Date</label>
-                <input type="datetime-local" name="" id="" value={dueDate} onChange={e => setDueDate(e.target.value)} />
-            </div>
-            <div className="description">
-                <label htmlFor="">Description</label>
-                <textarea name="" id="" value={description} onChange={e => setDescription(e.target.value)}></textarea>
-            </div>
-            <button type="submit">Submit</button>
-        </form>
 
-    </div>
-  )
+    return (
+        <div className="assignments-container">
+            <div className="assignments-header">
+                <div className="header-icon">📋</div>
+                <h1>Assignments</h1>
+            </div>
+
+            <div className="assignments-card">
+                <div className="card-header">
+                    <h2>Add New Assignment</h2>
+                </div>
+                
+                <form className="assignment-form" onSubmit={handleSubmit}>
+                    <div className="form-group">
+                        <label className="form-label">Title:</label>
+                        <input 
+                            type="text" 
+                            className="form-input"
+                            value={title} 
+                            onChange={e => setTitle(e.target.value)}
+                            placeholder="Enter assignment title"
+                        />
+                    </div>
+
+                    <div className="form-group">
+                        <label className="form-label">Due Date:</label>
+                        <input 
+                            type="datetime-local" 
+                            className="form-input date-input"
+                            value={dueDate} 
+                            onChange={e => setDueDate(e.target.value)} 
+                        />
+                    </div>
+
+                    <div className="form-group">
+                        <label className="form-label">Description:</label>
+                        <textarea 
+                            className="form-textarea"
+                            value={description} 
+                            onChange={e => setDescription(e.target.value)}
+                            placeholder="Enter assignment description"
+                            rows="4"
+                        ></textarea>
+                    </div>
+
+                    <button type="submit" className="submit-button">
+                        Add Assignment
+                    </button>
+                </form>
+            </div>
+        </div>
+    )
 }
 
 export default Assignments
