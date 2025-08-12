@@ -55,7 +55,7 @@ const Announcement = () => {
     console.log('after click');
 
     await dispatch(addAnnouncement(formData)).then(() => {
-      alert('Email sent successfully.');
+      alert('The announcement got shared successfully.');
       navigate(`/`);
     });
   };
