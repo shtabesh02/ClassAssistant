@@ -21,7 +21,7 @@ function Navigation({ isLoaded }) {
         <Box sx={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }} onClick={() => navigate('/')}>
          <IconButton edge="start" color="inherit" aria-label="logo">
          <img
-            src="../../public/logo.png" 
+            src="logo.png" 
             alt="logo"
             style={{ width: 32, height: 32 }}
           />
